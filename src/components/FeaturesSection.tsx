@@ -78,7 +78,6 @@ const FeaturesSection = () => {
 
   return (
     <section id="services" className="py-16 md:py-24 bg-muted relative">
-      {/* Diamond shapes decorations */}
       <div className="absolute left-0 top-0 w-20 h-20 mask-diamond bg-primary/20"></div>
       <div className="absolute right-0 bottom-0 w-40 h-40 mask-diamond bg-primary/30"></div>
 
@@ -123,6 +122,13 @@ const FeaturesSection = () => {
         </div>
 
         <div className="mt-16 text-center bg-primary/10 rounded-xl p-8 relative">
+          <div className="absolute -right-6 md:right-4 -top-6 md:top-4 w-24 h-24">
+            <img
+              src="https://cdn.poehali.dev/files/b885353d-000f-4494-bca0-cb765cac23a3.png"
+              alt="Балансик"
+              className="w-full h-auto"
+            />
+          </div>
           <h3 className="text-2xl font-bold mb-4">Нужна консультация?</h3>
           <p className="mb-6 max-w-3xl mx-auto">
             Наши специалисты готовы ответить на все ваши вопросы и помочь
