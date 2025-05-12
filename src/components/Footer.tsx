@@ -216,6 +216,14 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="mt-4 flex justify-center">
+          <img
+            src="https://cdn.poehali.dev/files/b885353d-000f-4494-bca0-cb765cac23a3.png"
+            alt="Балансик"
+            className="w-16 h-auto opacity-50 hover:opacity-100 transition-opacity"
+          />
+        </div>
       </div>
     </footer>
   );

@@ -16,8 +16,6 @@ const features = [
     title: "Групповые занятия",
     description:
       "Разнообразные групповые программы для тренировок в компании единомышленников.",
-    image:
-      "https://images.unsplash.com/photo-1517130038641-a774d04afb3c?q=80&w=1470&auto=format&fit=crop",
   },
   {
     id: 3,
@@ -36,11 +34,9 @@ const features = [
   {
     id: 5,
     icon: "Droplets",
-    title: "СПА и зона отдыха",
+    title: "СПА и сауна",
     description:
       "Восстановление и релаксация после интенсивных тренировок в нашей СПА-зоне.",
-    image:
-      "https://images.unsplash.com/photo-1531112998859-34de1be0c9af?q=80&w=1374&auto=format&fit=crop",
   },
   {
     id: 6,
@@ -78,6 +74,7 @@ const FeaturesSection = () => {
 
   return (
     <section id="services" className="py-16 md:py-24 bg-muted relative">
+      {/* Diamond shapes decorations */}
       <div className="absolute left-0 top-0 w-20 h-20 mask-diamond bg-primary/20"></div>
       <div className="absolute right-0 bottom-0 w-40 h-40 mask-diamond bg-primary/30"></div>
 
@@ -98,22 +95,9 @@ const FeaturesSection = () => {
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <CardContent className="p-6">
-                {feature.image ? (
-                  <div className="mb-4 h-40 overflow-hidden rounded-md">
-                    <img
-                      src={feature.image}
-                      alt={feature.title}
-                      className="w-full h-full object-cover transition-transform hover:scale-105 duration-300"
-                    />
-                  </div>
-                ) : (
-                  <div className="bg-primary/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
-                    <Icon
-                      name={feature.icon}
-                      className="h-8 w-8 text-primary"
-                    />
-                  </div>
-                )}
+                <div className="bg-primary/10 p-3 rounded-full w-14 h-14 flex items-center justify-center mb-4">
+                  <Icon name={feature.icon} className="h-8 w-8 text-primary" />
+                </div>
                 <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
               </CardContent>
@@ -122,13 +106,11 @@ const FeaturesSection = () => {
         </div>
 
         <div className="mt-16 text-center bg-primary/10 rounded-xl p-8 relative">
-          <div className="absolute -right-6 md:right-4 -top-6 md:top-4 w-24 h-24">
-            <img
-              src="https://cdn.poehali.dev/files/b885353d-000f-4494-bca0-cb765cac23a3.png"
-              alt="Балансик"
-              className="w-full h-auto"
-            />
-          </div>
+          <img
+            src="https://cdn.poehali.dev/files/b885353d-000f-4494-bca0-cb765cac23a3.png"
+            alt="Балансик"
+            className="absolute -top-12 left-1/2 transform -translate-x-1/2 w-24 h-auto"
+          />
           <h3 className="text-2xl font-bold mb-4">Нужна консультация?</h3>
           <p className="mb-6 max-w-3xl mx-auto">
             Наши специалисты готовы ответить на все ваши вопросы и помочь
